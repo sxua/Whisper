@@ -18,7 +18,6 @@ open class WhisperView: UIView {
   open lazy var titleLabel: UILabel = {
     let label = UILabel()
     label.textAlignment = .center
-    label.font = UIFont(name: "HelveticaNeue", size: 13)
     label.frame.size.width = UIScreen.main.bounds.width - 60
 
     return label
@@ -44,6 +43,7 @@ open class WhisperView: UIView {
 
     titleLabel.text = message.title
     titleLabel.textColor = message.textColor
+    titleLabel.font = message.font
     backgroundColor = message.backgroundColor
 
     if let images = whisperImages , images.count > 1 {
