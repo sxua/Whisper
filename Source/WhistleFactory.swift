@@ -186,11 +186,11 @@ open class WhistleFactory: UIViewController {
 
   // MARK: - Timer methods
 
-    @objc public func timerDidFire() {
+  @objc public func timerDidFire() {
     hide()
   }
 
-    @objc func orientationDidChange() {
+  @objc func orientationDidChange() {
     if whistleWindow.isKeyWindow {
       setupFrames()
       hide()
